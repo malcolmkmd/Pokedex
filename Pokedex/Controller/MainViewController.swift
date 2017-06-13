@@ -45,8 +45,10 @@ class MainViewController: UIViewController {
             let csv = try CSVParser(contentsOfURL: path)
             let rows = csv.rows
             for row in rows {
-                guard let id = Int(row["id"]!), let name = row["identifier"] else { return }
-                pokemon.append(Pokemon(name: name, pokedexId: id))
+                guard let id = Int(row["id"]!),
+                    let name = row["identifier"]
+                else { return }
+                pokemon.append(Pokemon(name: name, pokedexId: id, description: "", type: "", defense: "", height: "", weight: "", attack: "", nextEvolutionText: ""))
             }
         }catch let error{
             fatalError(error.localizedDescription)
@@ -96,7 +98,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "pokeDetailVC" {
             if let destination = segue.destination as? DetailViewController {
-                destination.Pokemon = sender as? Pokemon
+                destination.myPokemon = sender as? Pokemon
             }
         }
     }

@@ -18,6 +18,7 @@
 		9D8C7F1D1EEFD14900F08898 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D8C7F1C1EEFD14900F08898 /* music.mp3 */; };
 		9D8C7F1F1EEFD17D00F08898 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C7F1E1EEFD17D00F08898 /* PokemonCell.swift */; };
 		9D8C7F211EEFE29B00F08898 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C7F201EEFE29B00F08898 /* CSVParser.swift */; };
+		9DAE49E51EF0121D003B07DB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE49E41EF0121D003B07DB /* Router.swift */; };
 		9DE710831EEFEAF200EF5429 /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DE710821EEFEAF200EF5429 /* pokemon.ttf */; };
 		9DE710851EEFF37100EF5429 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE710841EEFF37100EF5429 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		9D8C7F1C1EEFD14900F08898 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music.mp3; path = ../../../../music.mp3; sourceTree = "<group>"; };
 		9D8C7F1E1EEFD17D00F08898 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		9D8C7F201EEFE29B00F08898 /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		9DAE49E41EF0121D003B07DB /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9DE710821EEFEAF200EF5429 /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pokemon.ttf; path = "../../../../../Downloads/Twitter Clone/devslopes-pokedex-master/devslopes-pokedex/pokemon.ttf"; sourceTree = "<group>"; };
 		9DE710841EEFF37100EF5429 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B2F423D059F52508FB87E3B0 /* Pods-Pokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pokedex/Pods-Pokedex.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				9D2D54B01EEFC4D000F889FC /* Model */,
 				9D2D54AF1EEFC4CA00F889FC /* View */,
 				9D2D54AE1EEFC4C200F889FC /* Controller */,
+				9DAE49E31EF011EF003B07DB /* NTW */,
 				9D2D54AD1EEFC4BC00F889FC /* Helpers */,
 				9D2D54B11EEFC4D600F889FC /* Interface */,
 				9D2D54AC1EEFC4B500F889FC /* Supporting */,
@@ -165,6 +168,14 @@
 				9DE710821EEFEAF200EF5429 /* pokemon.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9DAE49E31EF011EF003B07DB /* NTW */ = {
+			isa = PBXGroup;
+			children = (
+				9DAE49E41EF0121D003B07DB /* Router.swift */,
+			);
+			path = NTW;
 			sourceTree = "<group>";
 		};
 		EE04F79517D1B6E4ADEC6D8D /* Frameworks */ = {
@@ -306,6 +317,7 @@
 				9D8C7F211EEFE29B00F08898 /* CSVParser.swift in Sources */,
 				9D2D54801EEFC36100F889FC /* MainViewController.swift in Sources */,
 				9D8C7F1F1EEFD17D00F08898 /* PokemonCell.swift in Sources */,
+				9DAE49E51EF0121D003B07DB /* Router.swift in Sources */,
 				9DE710851EEFF37100EF5429 /* DetailViewController.swift in Sources */,
 				9D2D547E1EEFC36100F889FC /* AppDelegate.swift in Sources */,
 				9D8C7F161EEFC8A200F08898 /* Pokemon.swift in Sources */,
@@ -388,6 +400,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 			};
 			name = Debug;
 		};
@@ -437,6 +450,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -451,7 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.byteorbit.malcolm.Pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -467,7 +481,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.byteorbit.malcolm.Pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
