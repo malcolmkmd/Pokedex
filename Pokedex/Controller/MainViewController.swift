@@ -7,17 +7,30 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var pokemon = [Pokemon]()
+    var musicPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         parsePokemon(from: "pokemon")
+        initAudioPlayer()
+    }
+    
+    func initAudioPlayer(){
+        guard let path = Bundle.main.path(forResource: "music", ofType: "mp3") else { return }
+        
+        do {
+            musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path)!)
+        } catch let error {
+            fatalError(error.localizedDescription)
+        }
     }
     
     func parsePokemon(from csv: String){
@@ -32,6 +45,17 @@ class MainViewController: UIViewController {
             }
         }catch let error{
             fatalError(error.localizedDescription)
+        }
+    }
+    
+    
+    @IBAction func musicPressed(_ sender: UIButton){
+        if musicPlayer.isPlaying {
+            musicPlayer.pause()
+            sender.alpha = 0.2
+        }else {
+            musicPlayer.play()
+            sender.alpha = 1
         }
     }
 }
