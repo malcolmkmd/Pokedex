@@ -6,7 +6,7 @@ target 'Pokedex' do
   use_frameworks!
 
   # Pods for Pokedex
-  pod 'ChameleonFramework/Swift'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   target 'PokedexTests' do
     inherit! :search_paths
     # Pods for testing
