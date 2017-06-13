@@ -19,7 +19,8 @@ class PokemonCell: UICollectionViewCell {
     }
     
     func setupUI(){
+        layer.cornerRadius = 3
         nameLabel.text = pokemon?.name.capitalized
-        pokeImageView.image = UIImage(named: "\(String(describing: pokemon?.pokedexId))")
+        pokeImageView.image = UIImage(named: "\(pokemon?.pokedexId ?? 1)")
     }
 }

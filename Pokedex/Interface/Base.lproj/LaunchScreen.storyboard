@@ -17,22 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="POKEDEX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-0Q-6tj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POKEDEX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-0Q-6tj">
                                 <rect key="frame" x="24" y="273" width="327" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="zbH-wT-6LW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Malcolm Kumwenda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ7-hK-aca">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Malcolm Kumwenda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ7-hK-aca">
                                 <rect key="frame" x="24" y="638" width="327" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UNx-vn-MQG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Crc-0Q-6tj" firstAttribute="leading" secondItem="TYj-IV-yzK" secondAttribute="leading" constant="24" id="1mg-NP-JsS"/>
+                            <constraint firstItem="TYj-IV-yzK" firstAttribute="trailing" secondItem="Crc-0Q-6tj" secondAttribute="trailing" constant="24" id="LgZ-oJ-BMi"/>
+                            <constraint firstItem="TYj-IV-yzK" firstAttribute="trailing" secondItem="uJ7-hK-aca" secondAttribute="trailing" constant="24" id="MBT-8e-omC"/>
+                            <constraint firstItem="Crc-0Q-6tj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bVb-dK-GbD"/>
+                            <constraint firstItem="uJ7-hK-aca" firstAttribute="leading" secondItem="TYj-IV-yzK" secondAttribute="leading" constant="24" id="dma-Rh-PgZ"/>
+                            <constraint firstItem="Crc-0Q-6tj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="pcz-Ob-wGT"/>
+                            <constraint firstItem="TYj-IV-yzK" firstAttribute="bottom" secondItem="uJ7-hK-aca" secondAttribute="bottom" constant="8" id="rId-pn-4WE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TYj-IV-yzK"/>
                     </view>
                 </viewController>
