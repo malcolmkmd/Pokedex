@@ -33,10 +33,10 @@ class Pokemon {
                 let json = JSON(value)
                 let height = json["height"].int
                 let weight = json["weight"].int
-                let type = json["type"].string
+                let type = json["types"][0]["type"]["name"].string
                 let defense = json["defense"].int
-                self.height = "\(height ?? 0)"
-                self.weight = "\(weight ?? 0)"
+                self.height = "\(height!)"
+                self.weight = "\(weight!)"
                 self.type = type
                 self.defense = "\(defense ?? 0)"
             case .failure(let error):

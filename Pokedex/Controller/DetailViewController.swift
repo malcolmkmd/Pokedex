@@ -21,12 +21,17 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var subImageOne: UIImageView!
     @IBOutlet weak var subImageTwo: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var myPokemon: Pokemon!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        name.text = myPokemon.name
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        activityIndicator.startAnimating()
         mainImage.image = UIImage(named: "\(myPokemon.pokedexId!)")
         myPokemon.downloadDetails {
             self.updateUI()
@@ -34,11 +39,10 @@ class DetailViewController: UIViewController {
     }
     
     func updateUI(){
-        DispatchQueue.main.async {
-            self.weightLabel.text = self.myPokemon.weight
-            self.heightLabel.text = self.myPokemon.height
-            self.typeLabel.text = self.myPokemon.type
-        }
+        self.weightLabel.text = self.myPokemon.weight
+        self.heightLabel.text = self.myPokemon.height
+        self.typeLabel.text = self.myPokemon.type
+        activityIndicator.stopAnimating()
     }
     
     @IBAction func backPressed(_ sender: UIButton){
