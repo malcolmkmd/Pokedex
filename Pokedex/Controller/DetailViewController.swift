@@ -27,14 +27,18 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         name.text = myPokemon.name
-        
+        mainImage.image = UIImage(named: "\(myPokemon.pokedexId!)")
         myPokemon.downloadDetails {
             self.updateUI()
         }
     }
     
     func updateUI(){
-        
+        DispatchQueue.main.async {
+            self.weightLabel.text = self.myPokemon.weight
+            self.heightLabel.text = self.myPokemon.height
+            self.typeLabel.text = self.myPokemon.type
+        }
     }
     
     @IBAction func backPressed(_ sender: UIButton){

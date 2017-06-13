@@ -10,29 +10,39 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct Pokemon {
+class Pokemon {
     var name: String!
     var pokedexId: Int!
-    var description: String!
-    var type: String!
-    var defense: String!
-    var height: String!
-    var weight: String!
-    var attack: String!
-    var nextEvolutionText: String
+    var description: String?
+    var type: String?
+    var defense: String?
+    var height: String?
+    var weight: String?
+    var attack: String?
+    var nextEvolutionText: String?
     
-    func downloadDetails(completed: ()->()){
+    init(name: String, pokedexID: Int){
+        self.name = name
+        self.pokedexId = pokedexID
+    }
+    
+    func downloadDetails(completed: @escaping ()->()){
         Alamofire.request(API.pokemon(pokedexId).endPoint).responseJSON(completionHandler: { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                let height = json["height"].string
-                let weight = json["weight"].string
-                let type = json["types"]
-                
+                let height = json["height"].int
+                let weight = json["weight"].int
+                let type = json["type"].string
+                let defense = json["defense"].int
+                self.height = "\(height ?? 0)"
+                self.weight = "\(weight ?? 0)"
+                self.type = type
+                self.defense = "\(defense ?? 0)"
             case .failure(let error):
                 print(error)
             }
+            completed()
         })
     }
 }

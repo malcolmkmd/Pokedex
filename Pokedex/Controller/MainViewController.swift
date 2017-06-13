@@ -48,7 +48,7 @@ class MainViewController: UIViewController {
                 guard let id = Int(row["id"]!),
                     let name = row["identifier"]
                 else { return }
-                pokemon.append(Pokemon(name: name, pokedexId: id, description: "", type: "", defense: "", height: "", weight: "", attack: "", nextEvolutionText: ""))
+                pokemon.append(Pokemon(name: name, pokedexID: id))
             }
         }catch let error{
             fatalError(error.localizedDescription)
