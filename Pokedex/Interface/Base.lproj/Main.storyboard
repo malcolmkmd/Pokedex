@@ -58,13 +58,13 @@
                                     <constraint firstItem="rDv-5v-yQp" firstAttribute="centerY" secondItem="qxy-Nf-pMo" secondAttribute="centerY" id="zu6-Cn-rIw"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lLK-cT-KcI">
+                            <searchBar contentMode="redraw" placeholder=" Search Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="lLK-cT-KcI">
                                 <rect key="frame" x="0.0" y="65" width="320" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="0Oh-fr-yV5"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.13346317410469055" green="0.18231484293937683" blue="0.25190103054046631" alpha="1" colorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </searchBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="HMo-f2-9Y6">
                                 <rect key="frame" x="0.0" y="121" width="320" height="447"/>
@@ -141,11 +141,44 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Qo7-07-AuF" id="ahV-xg-9hc"/>
+                        <outlet property="searchBar" destination="lLK-cT-KcI" id="PXM-yd-YHx"/>
+                        <segue destination="j47-Yx-SCs" kind="show" identifier="pokeDetailVC" id="tBP-nM-u1V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="114.375" y="122.53521126760563"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="nhW-BH-IuV">
+            <objects>
+                <viewController id="j47-Yx-SCs" customClass="DetailViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides/>
+                    <view key="view" contentMode="scaleToFill" id="1nn-g3-Wpm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhZ-D9-r6h">
+                                <rect key="frame" x="139" y="274" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18998533487319946" green="0.35768887400627136" blue="0.43821841478347778" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GhZ-D9-r6h" firstAttribute="centerY" secondItem="1nn-g3-Wpm" secondAttribute="centerY" id="CGp-xw-bQB"/>
+                            <constraint firstItem="GhZ-D9-r6h" firstAttribute="centerX" secondItem="1nn-g3-Wpm" secondAttribute="centerX" id="LmE-Yd-RbP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Aeo-k9-cdd"/>
+                    </view>
+                    <connections>
+                        <outlet property="name" destination="GhZ-D9-r6h" id="6Sg-NL-bh0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p32-ZP-k8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="123"/>
         </scene>
     </scenes>
     <resources>
