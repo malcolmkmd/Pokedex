@@ -10,4 +10,9 @@ Pokedex app written in Swift 4. Concepts used:
 - Search filtering
 - stackViews
 - MVC architecture 
-- (Obviously source control) 
+- (Obviously source control)
+
+Libraries Utilized
+----------------------------------------------
+- Alamofire
+- Chameleon 
