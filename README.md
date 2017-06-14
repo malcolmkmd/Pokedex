@@ -1,5 +1,5 @@
 # Pokedex
-<img src="/Screenshots/2.png" width="425"/><img src="/Screenshots/3.png" width="425"/>
+<img src="/Screenshots/2.png" width="425"/>  <img src="/Screenshots/3.png" width="425"/>
 Pokedex app written in Swift 4. Concepts used: 
 
 - REST JSON API parsing with Alamofire
