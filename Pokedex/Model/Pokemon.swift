@@ -37,11 +37,11 @@ class Pokemon {
                 let type = json["types"][0]["type"]["name"].string
                 let defense = json["stats"][3]["base_stat"].int
                 let attack = json["stats"][0]["base_stat"].int
-                self.height = "\(height!)"
-                self.weight = "\(weight!)"
+                self.height = "\(height ?? 0)"
+                self.weight = "\(weight ?? 0)"
                 self.type = type
-                self.defense = "\(defense!)"
-                self.attack = "\(attack!)"
+                self.defense = "\(defense ?? 0)"
+                self.attack = "\(attack ?? 0)"
             case .failure(let error):
                 print(error)
             }
