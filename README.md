@@ -1,5 +1,5 @@
 # Pokedex
-![alt text](https://github.com/Mackis/Pokedex/tree/master/Screenshots/1.png "Screenshot 1") ![alt text](https://github.com/Mackis/Pokedex/tree/master/Screenshots/2.png "Screenshot 2") ![alt text](https://github.com/Mackis/Pokedex/tree/master/Screenshots/3.png "Screenshot 3")
+![Screenshot1](https://github.com/Mackis/Pokedex/tree/master/Screenshots/1.png "Screenshot 1") ![Screenshot2](https://github.com/Mackis/Pokedex/tree/master/Screenshots/2.png "Screenshot 2") ![Screenshot3](https://github.com/Mackis/Pokedex/tree/master/Screenshots/3.png "Screenshot 3")
 
 Pokedex app written in Swift 4. Concepts used: 
 
