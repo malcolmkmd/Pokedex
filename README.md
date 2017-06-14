@@ -1,6 +1,5 @@
 # Pokedex
-![Screenshot1](/Screenshots/1.png "Screenshot 1") ![Screenshot2](/Screenshots/2.png "Screenshot 2") ![Screenshot3](/Screenshots/3.png "Screenshot 3")
-<img src="/Screenshots/3.png" width="425"/> <img src="image2.png" width="425"/>
+<img src="/Screenshots/2.png" width="425"/><img src="/Screenshots/3.png" width="425"/>
 Pokedex app written in Swift 4. Concepts used: 
 
 - REST JSON API parsing with Alamofire
