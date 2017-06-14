@@ -1,6 +1,6 @@
 # Pokedex
 
-
+[Screenshot1]: https://github.com/Mackis/Pokedex/blob/master/Screenshots/1.png "Screenshot1"
 
 Pokedex app written in Swift 4. Concepts used: 
 
