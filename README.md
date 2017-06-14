@@ -15,4 +15,10 @@ Pokedex app written in Swift 4. Concepts used:
 Libraries Utilized
 ----------------------------------------------
 - Alamofire
-- Chameleon 
+- Chameleon
+- SwiftyJSON
+
+
+## TO-DOs
+- [ ] Next Evolution
+- [ ]  Pokemon Description

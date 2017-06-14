@@ -28,17 +28,20 @@ class Pokemon {
     
     func downloadDetails(completed: @escaping ()->()){
         Alamofire.request(API.pokemon(pokedexId).endPoint).responseJSON(completionHandler: { response in
+            print(response)
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 let height = json["height"].int
                 let weight = json["weight"].int
                 let type = json["types"][0]["type"]["name"].string
-                let defense = json["defense"].int
+                let defense = json["stats"][3]["base_stat"].int
+                let attack = json["stats"][0]["base_stat"].int
                 self.height = "\(height!)"
                 self.weight = "\(weight!)"
                 self.type = type
-                self.defense = "\(defense ?? 0)"
+                self.defense = "\(defense!)"
+                self.attack = "\(attack!)"
             case .failure(let error):
                 print(error)
             }

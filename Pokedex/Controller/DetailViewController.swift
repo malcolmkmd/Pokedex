@@ -33,15 +33,19 @@ class DetailViewController: UIViewController {
         super.viewWillAppear(animated)
         activityIndicator.startAnimating()
         mainImage.image = UIImage(named: "\(myPokemon.pokedexId!)")
+        name.text = myPokemon.name.capitalized
         myPokemon.downloadDetails {
             self.updateUI()
         }
     }
     
     func updateUI(){
-        self.weightLabel.text = self.myPokemon.weight
-        self.heightLabel.text = self.myPokemon.height
-        self.typeLabel.text = self.myPokemon.type
+        pokeIDLabel.text = "\(myPokemon.pokedexId!)"
+        weightLabel.text = myPokemon.weight
+        heightLabel.text = myPokemon.height
+        typeLabel.text = myPokemon.type
+        attackLabel.text = myPokemon.attack
+        defenseLabel.text = myPokemon.defense
         activityIndicator.stopAnimating()
     }
     
