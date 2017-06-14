@@ -1,6 +1,6 @@
 # Pokedex
 
-[Screenshot1]: https://github.com/Mackis/Pokedex/blob/master/Screenshots/1.png "Screenshot1"
+[Screenshot1]: https://github.com/Mackis/Pokedex/tree/master/Screenshots/1.png "Screenshot1"
 
 Pokedex app written in Swift 4. Concepts used: 
 
@@ -22,8 +22,10 @@ Libraries Utilized
 
 
 ## TO-DOs
-- [ ] Next Evolution
-- [ ]  Pokemon Description
+- [ ]  Pokemon Description Text from API
+- [ ] Get Next Evolution Text from API
+- [ ] Set Next Evolution images
+
 
 
 
